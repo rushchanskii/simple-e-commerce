@@ -1,0 +1,50 @@
+insert into Catalogue_Category (id, category_name) values(1001, 'Books');
+insert into Catalogue_Category (id, category_name) values(1002, 'Audio');
+insert into Catalogue_Category (id, category_name) values(1003, 'Video');
+insert into Catalogue_Category (id, category_name) values(1004, 'Games');
+insert into Catalogue_Category (id, category_name) values(1005, 'Painting');
+
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(1001, 1001, 'Sience Fiction & Fantasy');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(1002, 1001, 'History');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(1003, 1001, 'Detective Series');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(1004, 1001, 'Comics');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(1005, 1001, 'Science & Tech');
+
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(2001, 1002, 'Players');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(2002, 1002, 'CD Collections');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(2003, 1002, 'Vinil');
+
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(3001, 1003, 'DVD Collections');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(3002, 1003, 'Blue Ray');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(3003, 1003, 'Streeming Services');
+
+
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(4001, 1004, 'Nintendo Switch');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(4002, 1004, 'Play Station 4');
+insert into Catalogue_Sub_Category (id, category_id, sub_category_name) values(4003, 1004, 'XBox');
+
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10010, 1003, 3003, '', '', 5.99);
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10020, 1003, 3002, '', '', 7.99);
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10030, 1003, 3002, '', '', 9.99);
+
+
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10040, 1004, 4002, 'Мольберт стаціонарний', 'Бук', 349.99);
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10050, 1004, 4001, 'Мольберт переносний', 'Алюміній', 129.99);
+
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10060, 1002, 2003, 'Лак чорний', 'Вонючий', 9.99);
+
+insert into Catalogue_Product_Item (id, category_id, sub_category_id, name, description, price) values(10070, 1001, 1002, 'Фарба масляна охра', 'Охра, дуже крута', 19.99);
+
+insert into Users (id,login_name, encripted_password, first_name, last_name, address,  phone_number, e_mail, user_role) 
+values(1000, 'admin', '', 'Admin', 'Admin', 'Administrator Street, NY', '555-55-55', 'admin@localhost', 'ROLE_ADMIN');
+
+insert into Users (id,login_name, encripted_password, first_name, last_name, address,  phone_number, e_mail, user_role) 
+values(2000, 'manager', '', 'Manager', 'Manager', 'Manager Street, Chicago', '555-55-66', 'manager@localhost', 'ROLE_MANAGER');
+
+insert into Users (id,login_name, encripted_password, first_name, last_name, address,  phone_number, e_mail, user_role) 
+values(3000, 'client', '$2a$10$rpucRAtnxWtbZ.4Q6LPpneQmT54WmjZN7RxDjTnn7LL79GcSX/YrW', 'Client', 'Client', 'Clients Street, Los Angeles', '555-66-66', 'client@localhost', 'ROLE_CLIENT');
+
+insert into Users (id,login_name, encripted_password, first_name, last_name, address,  phone_number, e_mail, user_role) 
+values(4000, 'service', '$2a$10$rpucRAtnxWtbZ.4Q6LPpneQmT54WmjZN7RxDjTnn7LL79GcSX/YrW', 
+'Administrator', 'Person', 'Clients Street, Los Angeles', '555-66-66', 'service@localhost', 'ROLE_MANAGER');
+

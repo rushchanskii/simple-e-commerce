@@ -1,0 +1,42 @@
+
+<!--  <div class="container"> -->
+
+<div class="container-fluid" style="background-color: rgb(225, 235, 235)">
+	<div class="row m mt mb-4 justify-content-between align-items-center">
+
+		<div class="col-3 ">
+			<a class="btn btn-success rounded-circle col-auto mr-auto"
+				href="/">Home</a> 
+			<a class="btn btn-success"
+				href="/catalogue">Catalogue</a>
+			<a class="btn btn-success"
+				href="/client/shoppingcart">Cart</a>
+		</div>
+
+		<div class="col-4 mt-3">
+			<form id="search" action="/search" method="get">
+				<div class="input-group">
+					<input id="search" name="search" type="search" class="form-control"
+						placeholder="Quick search for products">
+					<button class="btn btn-primary" type="submit">Search</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="col-auto mr-auto">
+
+			You logged in as {${welcomeUser}}
+
+			<c:if test="${!isAuthenticated}">
+				<a class="btn btn-secondary" href="/adduser">Sign up</a>
+				<a class="btn btn-secondary" href="/login">Login</a>
+			</c:if>
+			<c:if test="${isAuthenticated}">
+				<a class="btn btn-secondary" href="/logout">Logout</a>
+			</c:if>
+		</div>
+
+	</div>
+</div>
+
+<!-- </div>  -->
